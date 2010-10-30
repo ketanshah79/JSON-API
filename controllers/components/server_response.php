@@ -248,6 +248,7 @@ class ServerResponseComponent extends Object {
 				$this->responseData['response'] = $returnData;
 			}
 		}
+		$this->responseData['response']['status'] = (isset($this->controller->status)) ? $this->controller->status : 900;
 		echo json_encode($this->responseData);
 		exit();		
 	}
